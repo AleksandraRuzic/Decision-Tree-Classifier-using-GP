@@ -1,7 +1,26 @@
 
 # coding: utf-8
 
-# In[1]:
+# In[2]:
+
+
+import pandas as pd
+import copy
+
+data = pd.read_csv('iris.csv')
+column_names = data.columns
+column_names = set(column_names.drop('Species'))
+class_column_name = "Species"
+class_variable = data['Species']
+data = data.drop('Species', axis = 1)
+
+relations = {'num':{'<', '<=', '>', '>='}, 'cat':{'==', '!='}}
+atributes = {'num':set(filter(lambda x : data[x].dtype=='float64' or data[x].dtype== 'int64', column_names)),
+             'cat':set(filter(lambda x : data[x].dtype!= 'float64' and data[x].dtype!= 'int64', column_names))}
+class_names = set(class_variable)
+
+
+# In[3]:
 
 
 import pandas as pd
@@ -9,14 +28,14 @@ import pandas as pd
 data = pd.read_csv("iris.csv")
 
 
-# In[2]:
+# In[15]:
 
 
 X = data.drop("Species", axis = 1)
 y = data["Species"]
 
 
-# In[43]:
+# In[4]:
 
 
 class Node:
@@ -24,7 +43,7 @@ class Node:
         self.index = index
 
 
-# In[62]:
+# In[5]:
 
 
 class Leaf(Node):
@@ -33,7 +52,7 @@ class Leaf(Node):
         self.class_name = class_name
 
 
-# In[63]:
+# In[6]:
 
 
 class NotLeaf(Node):
@@ -46,10 +65,11 @@ class NotLeaf(Node):
         self.right_node = None
 
 
-# In[76]:
+# In[7]:
 
 
 def print_nodes(node):
+    print(node.index, end = " ")
     if isinstance(node, Leaf):
         print(node.class_name)
     elif isinstance(node, NotLeaf):
@@ -58,7 +78,17 @@ def print_nodes(node):
         print_nodes(node.right_node)
 
 
-# In[77]:
+# In[ ]:
+
+
+def print_one_node(node):
+    if isinstance(node,Leaf):
+        print("Leaf: ", node.class_name, node.index)
+    elif isinstance(node, NotLeaf):
+        print("NotLeaf: ", node.left_part, node.relation, node.right_part, node.index)
+
+
+# In[12]:
 
 
 def predict_point(row, node):
@@ -97,7 +127,7 @@ def predict_point(row, node):
                 return predict_point(row, node.right_node)    
 
 
-# In[121]:
+# In[13]:
 
 
 class Tree:        
@@ -112,14 +142,14 @@ class Tree:
         print_nodes(self.root_node)
         
     def calculate_fitness(self):
-        y_pred = ["0"] * len(X.index)
-        for i in range(len(X.index)):
-            y_pred[i] = predict_point(X.iloc[i], self.root_node)
+        y_pred = ["0"] * len(data.index)
+        for i in range(len(data.index)):
+            y_pred[i] = predict_point(data.iloc[i], self.root_node)
             
         n_rows = len(y_pred)
         predicted = 0
         for i in range(n_rows):
-            if (y_pred[i] == y[i]):
+            if (y_pred[i] == class_variable[i]):
                 predicted += 1
                 
         return predicted/n_rows
@@ -147,14 +177,16 @@ class Tree:
         binarised = bin(target_index)[3:]
         node = self.root_node
         for i in range(len(binarised)):
-            if binarised[i] == 0:
+            if binarised[i] == "0":
                 node = node.left_node
             else:
-                node = node.right_node
-                
+                node = node.right_node  
         return node     
     
     def remove_node(self, target_index):
+        if target_index == 1:
+            self.root_node = None
+            return
         target_binarised = bin(target_index)
         self.setOfIndexes = set(
             filter (lambda index : bin(index)[:len(target_binarised)] != target_binarised
@@ -169,6 +201,9 @@ class Tree:
     def add_subtree(self, target_index, target_node):
         if target_index in self.setOfIndexes:
             self.remove_node(target_index)
+        if target_index == 1:
+            self.root_node = target_node
+            return
         parent_index = target_index // 2
         node = self.index_of(parent_index)
         if(target_index % 2 == 0):
@@ -185,7 +220,7 @@ class Tree:
             self.update_index(2*new_index + 1, target_node.right_node)           
 
 
-# In[123]:
+# In[14]:
 
 
 t = Tree(["Sepal_Length", ">", 5])
@@ -196,8 +231,7 @@ t.add_node(t.root_node.right_node, False, ['virginica'])
 t.add_node(t.root_node.right_node.left_node, True, ['setosa'])
 t.add_node(t.root_node.right_node.left_node, False, ['versicolor'])
 
-t.print_tree()
-print(t.setOfIndexes)
+t.calculate_fitness()
 
 nl = NotLeaf(1, "Petal_Width", "<=", 4)
 l1 = Leaf(2, "versicolor")
@@ -205,9 +239,4 @@ l2 = Leaf(3, "virginica")
 nl.left_node = l1
 nl.right_node = l2
 t.add_subtree(2, nl)
-
-t.print_tree()
-print(t.setOfIndexes)
-
-t.calculate_fitness()
 
