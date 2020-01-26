@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[27]:
+# In[33]:
 
 
 import Tree
@@ -9,20 +9,7 @@ import random
 import copy
 
 
-# In[28]:
-
-
-population_size = 200
-tournament_size = 10
-num_of_iterations = 30
-crossover_prob = 0.9
-relation_mutation_prob = 0.3
-right_side_mutation_prob = 0.3
-prune_prob = 0.2
-build_block_prob = 0.3
-
-
-# In[29]:
+# In[34]:
 
 
 def init_individual():
@@ -42,10 +29,10 @@ def init_individual():
     return t
 
 
-# In[30]:
+# In[35]:
 
 
-def selection(population):
+def selection(population, tournament_size, population_size):
     max_fitness = 0.0
     k = -1
     for i in range(tournament_size):
@@ -56,7 +43,7 @@ def selection(population):
     return k
 
 
-# In[31]:
+# In[36]:
 
 
 def build_block(tree):
@@ -70,7 +57,7 @@ def build_block(tree):
     tree.add_subtree(tree_index, new_node)
 
 
-# In[32]:
+# In[37]:
 
 
 def crossover(parent1, parent2):
@@ -103,7 +90,7 @@ def crossover(parent1, parent2):
     return [child1, child2]
 
 
-# In[33]:
+# In[38]:
 
 
 def relation_mutation(tree):
@@ -121,7 +108,7 @@ def relation_mutation(tree):
         
 
 
-# In[34]:
+# In[39]:
 
 
 def right_side_mutation(tree):
@@ -143,7 +130,7 @@ def right_side_mutation(tree):
         node.right_part = random.sample(set(data[node.left_part]), 1)[0]
 
 
-# In[35]:
+# In[40]:
 
 
 def prune(tree):
@@ -160,20 +147,24 @@ def prune(tree):
     tree.add_subtree(tree_index, new_node)
 
 
-# In[36]:
+# In[41]:
 
 
-def tree_evolution(tournament_size, crossover_prob, relation_mutation_prob, right_side_mutation_prob, prune_prob, build_block_prob):
+def tree_evolution(num_of_iterations, population_size, tournament_size, crossover_prob, relation_mutation_prob, right_side_mutation_prob, prune_prob, build_block_prob):
     population = []
     newPopulation = []
+    max_fitnes = 0
+    best_tree = None
+    max_depth = 1
+        
     for i in range(population_size):
         population.append(init_individual())
         newPopulation.append(init_individual())
 
     for iteration in range(num_of_iterations):
         for i in range(0, population_size, 2):
-            k1 = selection(population)
-            k2 = selection(population)
+            k1 = selection(population, tournament_size, population_size)
+            k2 = selection(population, tournament_size, population_size)
             if random.random() < crossover_prob:
                 [child1, child2] = crossover(population[k1], population[k2])
             else:
@@ -197,24 +188,27 @@ def tree_evolution(tournament_size, crossover_prob, relation_mutation_prob, righ
                 build_block(child2)
             newPopulation[i] = child1
             newPopulation[i+1] = child2
-        maximum = 0
-        tree = None
+            
         for i in range(population_size):
-            if newPopulation[i].calculate_fitness() > maximum:
-                maximum = newPopulation[i].calculate_fitness()
-                tree = copy.deepcopy(newPopulation[i])
-        print()
+            curr_depth = len(bin(max(newPopulation[i].setOfIndexes))[3:])
+            curr_fitnes = newPopulation[i].calculate_fitness()
+            if (curr_fitnes > max_fitness) or (abs(curr_fitnes - max_fitnes) < 0.000001 and max_depth > curr_depth):
+                max_fitnes = curr_fitnes
+                best_tree = copy.deepcopy(newPopulation[i])
+                max_depth = curr_depth
+                
+        """print()
         tree.print_tree()
         print(tree.calculate_fitness())
-        print()
+        print()"""
         population = newPopulation
     return (tree, tree.calculate_fitness())
 
 
-# In[37]:
+# In[42]:
 
 
-def tree_evolution_1(tournament_size, crossover_prob, relation_mutation_prob, right_side_mutation_prob, prune_prob, build_block_prob):
+def tree_evolution_1(num_of_iterations, population_size, tournament_size, crossover_prob, relation_mutation_prob, right_side_mutation_prob, prune_prob, build_block_prob):
     population = []
     newPopulation = []
     L = 0.0
@@ -222,6 +216,10 @@ def tree_evolution_1(tournament_size, crossover_prob, relation_mutation_prob, ri
     avg_width = 2
     prev_avg_dep = 0
     prev_avg_width = 0
+    best_tree = None
+    max_fitnes = 0
+    best_depth = 1
+    
     for i in range(population_size):
         population.append(init_individual())
         newPopulation.append(init_individual())
@@ -235,8 +233,8 @@ def tree_evolution_1(tournament_size, crossover_prob, relation_mutation_prob, ri
 
         for i in range(0, population_size, 2):
 
-            k1 = selection(population)
-            k2 = selection(population)
+            k1 = selection(population, tournament_size, population_size)
+            k2 = selection(population, tournament_size, population_size)
 
             if random.random() < crossover_prob:
                 [child1, child2] = crossover(population[k1], population[k2])
@@ -259,21 +257,22 @@ def tree_evolution_1(tournament_size, crossover_prob, relation_mutation_prob, ri
             newPopulation[i] = child1
             newPopulation[i+1] = child2
 
-        maximum = 0
         prev_avg_width = avg_width
         prev_avg_dep = avg_dep
         avg_width = 0
         avg_dep = 0
-        tree = None
 
         for i in range(population_size):
-            avg_dep += len(bin(max(newPopulation[i].setOfIndexes))[3:])
+            curr_depth = len(bin(max(newPopulation[i].setOfIndexes))[3:])
+            avg_dep += curr_depth
             avg_width += len(set(filter(
                 lambda index:not any(index2 == 2*index for index2 in newPopulation[i].setOfIndexes),
                 newPopulation[i].setOfIndexes)))
-            if newPopulation[i].calculate_fitness() > maximum:
-                maximum = newPopulation[i].calculate_fitness()
-                tree = copy.deepcopy(newPopulation[i])
+            curr_fitnes = newPopulation[i].calculate_fitness()
+            if (curr_fitnes > max_fitness) or (abs(curr_fitnes - max_fitnes) < 0.000001 and max_depth > curr_depth):
+                max_fitnes = curr_fitnes
+                best_tree = copy.deepcopy(newPopulation[i])
+                max_depth = curr_depth
 
         avg_dep /= population_size
         avg_width /= population_size
@@ -286,10 +285,10 @@ def tree_evolution_1(tournament_size, crossover_prob, relation_mutation_prob, ri
     return (tree, tree.calculate_fitness())
 
 
-# In[38]:
+# In[43]:
 
 
-def tree_evolution_2(tournament_size, crossover_prob, relation_mutation_prob, right_side_mutation_prob, prune_prob, build_block_prob):
+def tree_evolution_2(num_of_iterations, population_size, tournament_size, crossover_prob, relation_mutation_prob, right_side_mutation_prob, prune_prob, build_block_prob):
     population = []
     newPopulation = []
     L = 0.0
@@ -297,6 +296,10 @@ def tree_evolution_2(tournament_size, crossover_prob, relation_mutation_prob, ri
     avg_width = 2
     prev_avg_dep = 0
     prev_avg_width = 0
+    best_tree = None
+    max_fitness = 0
+    best_depth = 1
+    
     for i in range(population_size):
         population.append(init_individual())
         newPopulation.append(init_individual())
@@ -314,8 +317,8 @@ def tree_evolution_2(tournament_size, crossover_prob, relation_mutation_prob, ri
 
         for i in range(0, population_size, 2):
 
-            k1 = selection(population)
-            k2 = selection(population)
+            k1 = selection(population, tournament_size, population_size)
+            k2 = selection(population, tournament_size, population_size)
 
             if random.random() < crossover_prob:
                 [child1, child2] = crossover(population[k1], population[k2])
@@ -338,34 +341,35 @@ def tree_evolution_2(tournament_size, crossover_prob, relation_mutation_prob, ri
             newPopulation[i] = child1
             newPopulation[i+1] = child2
 
-        maximum = 0
         prev_avg_width = avg_width
         prev_avg_dep = avg_dep
         avg_width = 0
         avg_dep = 0
-        tree = None
 
         for i in range(population_size):
-            avg_dep += len(bin(max(newPopulation[i].setOfIndexes))[3:])
+            curr_depth = len(bin(max(newPopulation[i].setOfIndexes))[3:])
+            avg_dep += curr_depth
             avg_width += len(set(filter(
                 lambda index:not any(index2 == 2*index for index2 in newPopulation[i].setOfIndexes),
                 newPopulation[i].setOfIndexes)))
-            if newPopulation[i].calculate_fitness() > maximum:
-                maximum = newPopulation[i].calculate_fitness()
-                tree = copy.deepcopy(newPopulation[i])
+            curr_fitnes = newPopulation[i].calculate_fitness()
+            if (curr_fitnes > max_fitness) or (abs(curr_fitnes - max_fitnes) < 0.000001 and max_depth > curr_depth):
+                max_fitnes = curr_fitnes
+                best_tree = copy.deepcopy(newPopulation[i])
+                max_depth = curr_depth
 
         avg_dep /= population_size
         avg_width /= population_size
 
-        print()
-        tree.print_tree()
-        print(tree.calculate_fitness())
-        print()
+        """print()
+        best_tree.print_tree()
+        print(best_tree.calculate_fitness())
+        print()"""
         population = newPopulation
-    return (tree, tree.calculate_fitness())
+    return (best_tree, max_fitness)
 
 
-# In[39]:
+# In[44]:
 
 
 def calculate_test_fitness(tree):
@@ -380,6 +384,15 @@ def calculate_test_fitness(tree):
             predicted += 1
 
     return predicted/n_rows
+
+
+# In[45]:
+
+
+(t, f) = tree_evolution_2(30, 200, 10, 0.9, 0.3, 0.3, 0.2, 0.3)
+t.print_tree()
+print(f)
+calculate_test_fitness(t)
 
 
 # In[ ]:
