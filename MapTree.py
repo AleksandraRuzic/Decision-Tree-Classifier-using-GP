@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[215]:
+# In[1]:
 
 
 import math
@@ -24,7 +24,7 @@ class_names = set(class_variable)
         
 
 
-# In[246]:
+# In[2]:
 
 
 class Node:
@@ -78,7 +78,7 @@ class NotLeaf(Node):
                  (left_part in atributes['cat'] and not(right_part in set(data[left_part]))))
 
 
-# In[247]:
+# In[3]:
 
 
 class Tree:
@@ -130,6 +130,8 @@ class Tree:
         diff = target_index-target_node.index
         
         def update_couple(couple):
+            print(couple)
+            print()
             new_couple = (couple[0]+int(math.ldexp(diff, math.floor(math.log(couple[0], 2)))), couple[1])
             new_couple[1].index = new_couple[0]
             return new_couple
@@ -162,7 +164,6 @@ class Tree:
             workingNode = self.node_with_index[node]
             
         if isinstance(workingNode, Leaf):
-            print(workingNode.class_name)
             return workingNode.class_name
         
         elif isinstance(workingNode, NotLeaf):
@@ -204,7 +205,7 @@ class Tree:
         return sum(truePredictions)/whole_data.shape[0]
 
 
-# In[248]:
+# In[4]:
 
 
 t = Tree(["Sepal_Length", ">", 5])

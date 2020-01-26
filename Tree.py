@@ -1,11 +1,12 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 import pandas as pd
 import copy
+from sklearn.model_selection import train_test_split
 
 data = pd.read_csv('iris.csv')
 column_names = data.columns
@@ -14,28 +15,19 @@ class_column_name = "Species"
 class_variable = data['Species']
 data = data.drop('Species', axis = 1)
 
+X_train, X_test, y_train, y_test = train_test_split(data, class_variable, test_size = 0.33, stratify = class_variable)
+X_train = pd.DataFrame(X_train)
+X_test = pd.DataFrame(X_test)
+y_train = y_train.array
+y_test = y_test.array
+
 relations = {'num':{'<', '<=', '>', '>='}, 'cat':{'==', '!='}}
 atributes = {'num':set(filter(lambda x : data[x].dtype=='float64' or data[x].dtype== 'int64', column_names)),
              'cat':set(filter(lambda x : data[x].dtype!= 'float64' and data[x].dtype!= 'int64', column_names))}
 class_names = set(class_variable)
 
 
-# In[3]:
-
-
-import pandas as pd
-
-data = pd.read_csv("iris.csv")
-
-
-# In[15]:
-
-
-X = data.drop("Species", axis = 1)
-y = data["Species"]
-
-
-# In[4]:
+# In[2]:
 
 
 class Node:
@@ -43,7 +35,7 @@ class Node:
         self.index = index
 
 
-# In[5]:
+# In[3]:
 
 
 class Leaf(Node):
@@ -52,7 +44,7 @@ class Leaf(Node):
         self.class_name = class_name
 
 
-# In[6]:
+# In[4]:
 
 
 class NotLeaf(Node):
@@ -65,7 +57,7 @@ class NotLeaf(Node):
         self.right_node = None
 
 
-# In[7]:
+# In[5]:
 
 
 def print_nodes(node):
@@ -78,7 +70,7 @@ def print_nodes(node):
         print_nodes(node.right_node)
 
 
-# In[ ]:
+# In[6]:
 
 
 def print_one_node(node):
@@ -88,7 +80,7 @@ def print_one_node(node):
         print("NotLeaf: ", node.left_part, node.relation, node.right_part, node.index)
 
 
-# In[12]:
+# In[7]:
 
 
 def predict_point(row, node):
@@ -127,7 +119,7 @@ def predict_point(row, node):
                 return predict_point(row, node.right_node)    
 
 
-# In[13]:
+# In[8]:
 
 
 class Tree:        
@@ -142,14 +134,14 @@ class Tree:
         print_nodes(self.root_node)
         
     def calculate_fitness(self):
-        y_pred = ["0"] * len(data.index)
-        for i in range(len(data.index)):
-            y_pred[i] = predict_point(data.iloc[i], self.root_node)
+        y_pred = ["0"] * len(X_train.index)
+        for i in range(len(X_train.index)):
+            y_pred[i] = predict_point(X_train.iloc[i], self.root_node)
             
         n_rows = len(y_pred)
         predicted = 0
         for i in range(n_rows):
-            if (y_pred[i] == class_variable[i]):
+            if (y_pred[i] == y_train[i]):
                 predicted += 1
                 
         return predicted/n_rows
@@ -220,7 +212,7 @@ class Tree:
             self.update_index(2*new_index + 1, target_node.right_node)           
 
 
-# In[14]:
+# In[9]:
 
 
 t = Tree(["Sepal_Length", ">", 5])
@@ -239,4 +231,10 @@ l2 = Leaf(3, "virginica")
 nl.left_node = l1
 nl.right_node = l2
 t.add_subtree(2, nl)
+
+
+# In[ ]:
+
+
+
 

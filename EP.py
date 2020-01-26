@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
+# In[27]:
 
 
 import Tree
@@ -9,20 +9,20 @@ import random
 import copy
 
 
-# In[4]:
+# In[28]:
 
 
-population_size = 50
-tournament_size = 5
+population_size = 200
+tournament_size = 10
 num_of_iterations = 30
 crossover_prob = 0.9
-relation_mutation_prob = 0.1
-right_side_mutation_prob = 0.1
+relation_mutation_prob = 0.3
+right_side_mutation_prob = 0.3
 prune_prob = 0.2
-build_block_prob = 0.1
+build_block_prob = 0.3
 
 
-# In[5]:
+# In[29]:
 
 
 def init_individual():
@@ -42,7 +42,7 @@ def init_individual():
     return t
 
 
-# In[6]:
+# In[30]:
 
 
 def selection(population):
@@ -56,7 +56,7 @@ def selection(population):
     return k
 
 
-# In[7]:
+# In[31]:
 
 
 def build_block(tree):
@@ -70,7 +70,7 @@ def build_block(tree):
     tree.add_subtree(tree_index, new_node)
 
 
-# In[8]:
+# In[32]:
 
 
 def crossover(parent1, parent2):
@@ -103,7 +103,7 @@ def crossover(parent1, parent2):
     return [child1, child2]
 
 
-# In[9]:
+# In[33]:
 
 
 def relation_mutation(tree):
@@ -121,7 +121,7 @@ def relation_mutation(tree):
         
 
 
-# In[10]:
+# In[34]:
 
 
 def right_side_mutation(tree):
@@ -143,7 +143,7 @@ def right_side_mutation(tree):
         node.right_part = random.sample(set(data[node.left_part]), 1)[0]
 
 
-# In[11]:
+# In[35]:
 
 
 def prune(tree):
@@ -160,7 +160,7 @@ def prune(tree):
     tree.add_subtree(tree_index, new_node)
 
 
-# In[26]:
+# In[36]:
 
 
 def tree_evolution(tournament_size, crossover_prob, relation_mutation_prob, right_side_mutation_prob, prune_prob, build_block_prob):
@@ -208,9 +208,10 @@ def tree_evolution(tournament_size, crossover_prob, relation_mutation_prob, righ
         print(tree.calculate_fitness())
         print()
         population = newPopulation
+    return (tree, tree.calculate_fitness())
 
 
-# In[27]:
+# In[37]:
 
 
 def tree_evolution_1(tournament_size, crossover_prob, relation_mutation_prob, right_side_mutation_prob, prune_prob, build_block_prob):
@@ -277,14 +278,15 @@ def tree_evolution_1(tournament_size, crossover_prob, relation_mutation_prob, ri
         avg_dep /= population_size
         avg_width /= population_size
 
-        print()
+        """print()
         tree.print_tree()
         print(tree.calculate_fitness())
-        print()
+        print()"""
         population = newPopulation
+    return (tree, tree.calculate_fitness())
 
 
-# In[28]:
+# In[38]:
 
 
 def tree_evolution_2(tournament_size, crossover_prob, relation_mutation_prob, right_side_mutation_prob, prune_prob, build_block_prob):
@@ -360,6 +362,24 @@ def tree_evolution_2(tournament_size, crossover_prob, relation_mutation_prob, ri
         print(tree.calculate_fitness())
         print()
         population = newPopulation
+    return (tree, tree.calculate_fitness())
+
+
+# In[39]:
+
+
+def calculate_test_fitness(tree):
+    y_pred = ["0"] * len(Tree.X_test.index)
+    for i in range(len(Tree.X_test.index)):
+        y_pred[i] = Tree.predict_point(Tree.X_test.iloc[i], tree.root_node)
+
+    n_rows = len(y_pred)
+    predicted = 0
+    for i in range(n_rows):
+        if (y_pred[i] == Tree.y_test[i]):
+            predicted += 1
+
+    return predicted/n_rows
 
 
 # In[ ]:
