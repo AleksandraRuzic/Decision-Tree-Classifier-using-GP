@@ -153,9 +153,9 @@ def prune(tree):
 def tree_evolution(num_of_iterations, population_size, tournament_size, crossover_prob, relation_mutation_prob, right_side_mutation_prob, prune_prob, build_block_prob):
     population = []
     newPopulation = []
-    max_fitnes = 0
+    max_fitness = 0
     best_tree = None
-    max_depth = 1
+    best_depth = 1
         
     for i in range(population_size):
         population.append(init_individual())
@@ -192,10 +192,10 @@ def tree_evolution(num_of_iterations, population_size, tournament_size, crossove
         for i in range(population_size):
             curr_depth = len(bin(max(newPopulation[i].setOfIndexes))[3:])
             curr_fitnes = newPopulation[i].calculate_fitness()
-            if (curr_fitnes > max_fitness) or (abs(curr_fitnes - max_fitnes) < 0.000001 and max_depth > curr_depth):
-                max_fitnes = curr_fitnes
+            if (curr_fitnes > max_fitness) or (abs(curr_fitnes - max_fitness) < 0.000001 and best_depth > curr_depth):
+                max_fitness = curr_fitnes
                 best_tree = copy.deepcopy(newPopulation[i])
-                max_depth = curr_depth
+                best_depth = curr_depth
                 
         """print()
         tree.print_tree()
@@ -217,7 +217,7 @@ def tree_evolution_1(num_of_iterations, population_size, tournament_size, crosso
     prev_avg_dep = 0
     prev_avg_width = 0
     best_tree = None
-    max_fitnes = 0
+    max_fitness = 0
     best_depth = 1
     
     for i in range(population_size):
@@ -269,10 +269,10 @@ def tree_evolution_1(num_of_iterations, population_size, tournament_size, crosso
                 lambda index:not any(index2 == 2*index for index2 in newPopulation[i].setOfIndexes),
                 newPopulation[i].setOfIndexes)))
             curr_fitnes = newPopulation[i].calculate_fitness()
-            if (curr_fitnes > max_fitness) or (abs(curr_fitnes - max_fitnes) < 0.000001 and max_depth > curr_depth):
-                max_fitnes = curr_fitnes
+            if (curr_fitnes > max_fitness) or (abs(curr_fitnes - max_fitness) < 0.000001 and best_depth > curr_depth):
+                max_fitness = curr_fitnes
                 best_tree = copy.deepcopy(newPopulation[i])
-                max_depth = curr_depth
+                best_depth = curr_depth
 
         avg_dep /= population_size
         avg_width /= population_size
@@ -282,7 +282,7 @@ def tree_evolution_1(num_of_iterations, population_size, tournament_size, crosso
         print(tree.calculate_fitness())
         print()"""
         population = newPopulation
-    return (tree, tree.calculate_fitness())
+    return (best_tree, max_fitness)
 
 
 # In[43]:
@@ -353,8 +353,8 @@ def tree_evolution_2(num_of_iterations, population_size, tournament_size, crosso
                 lambda index:not any(index2 == 2*index for index2 in newPopulation[i].setOfIndexes),
                 newPopulation[i].setOfIndexes)))
             curr_fitnes = newPopulation[i].calculate_fitness()
-            if (curr_fitnes > max_fitness) or (abs(curr_fitnes - max_fitnes) < 0.000001 and max_depth > curr_depth):
-                max_fitnes = curr_fitnes
+            if (curr_fitnes > max_fitness) or (abs(curr_fitnes - max_fitness) < 0.000001 and max_depth > curr_depth):
+                max_fitness = curr_fitnes
                 best_tree = copy.deepcopy(newPopulation[i])
                 max_depth = curr_depth
 
@@ -384,15 +384,6 @@ def calculate_test_fitness(tree):
             predicted += 1
 
     return predicted/n_rows
-
-
-# In[45]:
-
-
-(t, f) = tree_evolution_2(30, 200, 10, 0.9, 0.3, 0.3, 0.2, 0.3)
-t.print_tree()
-print(f)
-calculate_test_fitness(t)
 
 
 # In[ ]:
