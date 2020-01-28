@@ -1,19 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 
 import pandas as pd
 import copy
 from sklearn.model_selection import train_test_split
 
-data = pd.read_csv('iris.csv')
+data = pd.read_csv('pima-indians-diabetes.csv', header = None)
+data.columns = range(0,9)
+#data = data.drop(1, axis = 1)
 column_names = data.columns
-column_names = set(column_names.drop('Species'))
-class_column_name = "Species"
-class_variable = data['Species']
-data = data.drop('Species', axis = 1)
+column_names = set(column_names.drop(8))
+class_column_name = 8
+class_variable = data[8]
+data = data.drop(8, axis = 1)
 
 X_train, X_test, y_train, y_test = train_test_split(data, class_variable, test_size = 0.33, stratify = class_variable)
 X_train = pd.DataFrame(X_train)
@@ -25,6 +27,17 @@ relations = {'num':{'<', '<=', '>', '>='}, 'cat':{'==', '!='}}
 atributes = {'num':set(filter(lambda x : data[x].dtype=='float64' or data[x].dtype== 'int64', column_names)),
              'cat':set(filter(lambda x : data[x].dtype!= 'float64' and data[x].dtype!= 'int64', column_names))}
 class_names = set(class_variable)
+
+
+# In[ ]:
+
+
+def split(X_train, X_test, y_train, y_test):
+    X_train, X_test, y_train, y_test = train_test_split(data, class_variable, test_size = 0.33, stratify = class_variable)
+    X_train = pd.DataFrame(X_train)
+    X_test = pd.DataFrame(X_test)
+    y_train = y_train.array
+    y_test = y_test.array
 
 
 # In[2]:
@@ -215,22 +228,22 @@ class Tree:
 # In[9]:
 
 
-t = Tree(["Sepal_Length", ">", 5])
-t.add_node(t.root_node, True, ['setosa'])
-t.add_node(t.root_node, False, ["Sepal_Width", "<", 3])
-t.add_node(t.root_node.right_node, True, ['Petal_Length', '<', 6])
-t.add_node(t.root_node.right_node, False, ['virginica'])
-t.add_node(t.root_node.right_node.left_node, True, ['setosa'])
-t.add_node(t.root_node.right_node.left_node, False, ['versicolor'])
+#t = Tree(["Sepal_Length", ">", 5])
+#t.add_node(t.root_node, True, ['setosa'])
+#t.add_node(t.root_node, False, ["Sepal_Width", "<", 3])
+#t.add_node(t.root_node.right_node, True, ['Petal_Length', '<', 6])
+#t.add_node(t.root_node.right_node, False, ['virginica'])
+#t.add_node(t.root_node.right_node.left_node, True, ['setosa'])
+#t.add_node(t.root_node.right_node.left_node, False, ['versicolor'])
 
-t.calculate_fitness()
+#t.calculate_fitness()
 
-nl = NotLeaf(1, "Petal_Width", "<=", 4)
-l1 = Leaf(2, "versicolor")
-l2 = Leaf(3, "virginica")
-nl.left_node = l1
-nl.right_node = l2
-t.add_subtree(2, nl)
+#nl = NotLeaf(1, "Petal_Width", "<=", 4)
+#l1 = Leaf(2, "versicolor")
+#l2 = Leaf(3, "virginica")
+#nl.left_node = l1
+#nl.right_node = l2
+#t.add_subtree(2, nl)
 
 
 # In[ ]:
