@@ -1,0 +1,2264 @@
+```
+#IRIS, 1000 u populaciji, bez ponovljenog delova na test i trening
+Broj iteracije:  1
+1 Petal_Width   <   0.6779516684516743
+2 setosa
+3 Petal_Width   <   1.6372229947240495
+6 versicolor
+7 virginica
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  2
+1 Petal_Length   >   2.533159700132736
+2 Petal_Width   <   1.797292727323116
+4 versicolor
+5 virginica
+3 setosa
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  3
+1 Petal_Width   <   1.638976567018845
+2 Petal_Width   >=   0.6663138478673356
+4 versicolor
+5 setosa
+3 virginica
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  4
+1 Petal_Width   >=   1.652224141991948
+2 virginica
+3 Petal_Width   <=   0.6376210982587309
+6 setosa
+7 versicolor
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  5
+1 Petal_Length   >=   2.880230301247617
+2 Petal_Width   >=   1.726154029949234
+4 virginica
+5 versicolor
+3 setosa
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  6
+1 Petal_Width   <=   1.6900623458566024
+2 Petal_Width   >   0.8516333656347123
+4 versicolor
+5 setosa
+3 virginica
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  7
+1 Petal_Length   >   1.9242394432282208
+2 Petal_Width   >=   1.7729649810390264
+4 virginica
+5 versicolor
+3 setosa
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  1
+1 Petal_Width   <   1.6763300540236008
+2 Petal_Length   <=   1.9840743139598658
+4 setosa
+5 versicolor
+3 virginica
+Trening preciznost:  0.95
+Test preciznost:  0.98
+
+
+
+#IONOSPHERE, 100 u populaciji, sa ponovljenom podelom na test i trening
+#Verzija 1
+
+Broj iteracije:  1
+1 2   <=   0.12241192923391342
+2 b
+3 4   <   0.014258603283672677
+6 b
+7 15   <   -0.9407995729447829
+14 b
+15 g
+Trening preciznost:  0.9276595744680851
+Test preciznost:  0.8879310344827587
+
+
+Broj iteracije:  2
+1 4   >=   0.2785949272001327
+2 0   ==   0
+4 b
+5 g
+3 b
+Trening preciznost:  0.902127659574468
+Test preciznost:  0.853448275862069
+
+
+Broj iteracije:  3
+1 0   <=   0
+2 29   >=   -0.9316679179340717
+4 b
+5 b
+3 27   >   -0.9308697318806172
+6 3   <=   -0.5760532771044526
+12 b
+13 g
+7 27   >=   -0.96053294133067
+14 3   <=   0.25066085698404206
+28 b
+29 g
+15 27   >=   -0.839222548416894
+30 3   <=   0.25066085698404206
+60 b
+61 g
+31 29   <=   -0.4524834834994971
+62 b
+63 b
+Trening preciznost:  0.8425531914893617
+Test preciznost:  0.8017241379310345
+
+
+Broj iteracije:  4
+1 2   <   0.19375370570273343
+2 11   !=   0.19681440903496905
+4 b
+5 b
+3 23   >   -0.9947070477358921
+6 g
+7 b
+Trening preciznost:  0.8595744680851064
+Test preciznost:  0.853448275862069
+
+
+Broj iteracije:  5
+1 0   <=   0
+2 b
+3 3   >   -0.4681765975800707
+6 3   <   0.7888079008876792
+12 3   >=   -0.8612880645817551
+24 5   >=   -0.2873615875257267
+48 g
+49 b
+25 b
+13 b
+7 b
+Trening preciznost:  0.8595744680851064
+Test preciznost:  0.7931034482758621
+
+
+Broj iteracije:  6
+1 6   >   0.029923662350747726
+2 13   >   -0.5866168936313421
+4 g
+5 b
+3 b
+Trening preciznost:  0.8638297872340426
+Test preciznost:  0.8620689655172413
+
+
+Broj iteracije:  7
+1 4   >   0.017127733689058955
+2 2   >   0.1583352064467629
+4 g
+5 b
+3 b
+Trening preciznost:  0.8936170212765957
+Test preciznost:  0.8620689655172413
+
+
+Broj iteracije:  8
+1 0   <=   0
+2 b
+3 2   >=   0.19314394800540113
+6 g
+7 b
+Trening preciznost:  0.8638297872340426
+Test preciznost:  0.853448275862069
+
+
+Broj iteracije:  9
+1 14   <=   0.23854168289509348
+2 10   <   -0.017285534337769803
+4 10   >=   -0.8988580629460639
+8 33   <=   0.8974059110519101
+16 g
+17 g
+9 b
+5 b
+3 10   >=   0.02171142739185017
+6 10   >=   -0.8988580629460639
+12 10   >=   0.006892221519592345
+24 g
+25 b
+13 b
+7 b
+Trening preciznost:  0.8425531914893617
+Test preciznost:  0.7758620689655172
+
+
+Broj iteracije:  10
+1 0   >   0
+2 3   <   0.537496541047676
+4 3   <   -0.6750635949172752
+8 19   >=   -0.9680938386821272
+16 b
+17 b
+9 3   <   -0.4968344987694673
+18 b
+19 g
+5 3   <   -0.4968344987694673
+10 19   <   0.6042451845424668
+20 b
+21 b
+11 3   <=   0.537496541047676
+22 3   <=   -0.4968344987694673
+44 b
+45 g
+23 3   >=   0.6971052639982471
+46 19   <   -0.8671334361038381
+92 b
+93 b
+47 3   >=   0.9650337424939428
+94 b
+95 g
+3 b
+Trening preciznost:  0.851063829787234
+Test preciznost:  0.7672413793103449
+
+
+Broj iteracije:  11
+1 4   <   0.23319289854545255
+2 b
+3 9   >   -0.6306084524615683
+6 9   >   0.9432895178627061
+12 9   >=   -0.6690090643674713
+24 9   >=   0.9961053109973699
+48 b
+49 g
+25 g
+13 g
+7 26   >   -0.030009029165197543
+14 b
+15 b
+Trening preciznost:  0.8893617021276595
+Test preciznost:  0.8706896551724138
+
+
+Broj iteracije:  12
+1 3   <=   -0.2679330465351364
+2 19   >   0.2636181797793833
+4 b
+5 b
+3 19   >=   -0.9990925259983505
+6 g
+7 b
+Trening preciznost:  0.7617021276595745
+Test preciznost:  0.7241379310344828
+
+
+Broj iteracije:  13
+1 13   <   -0.5587417604896494
+2 b
+3 4   <   0.02468249894718233
+6 b
+7 g
+Trening preciznost:  0.8723404255319149
+Test preciznost:  0.8793103448275862
+
+
+Broj iteracije:  14
+1 2   <=   0.17611776689739833
+2 10   !=   -0.024061600000296002
+4 b
+5 g
+3 15   >   -0.890204371444441
+6 g
+7 b
+Trening preciznost:  0.8468085106382979
+Test preciznost:  0.853448275862069
+
+
+Broj iteracije:  15
+1 7   >=   -0.9776667153798018
+2 9   <   -0.8523188704990088
+4 b
+5 9   <   0.05956735587559181
+10 6   >   0.16570099205045796
+20 g
+21 b
+11 6   >=   0.08456291837648622
+22 g
+23 b
+3 b
+Trening preciznost:  0.8851063829787233
+Test preciznost:  0.8793103448275862
+
+#IONOSPHERE, 100 u populaciji, sa ponovljenom podelom na test i trening
+#Verzija 2
+
+Broj iteracije:  1
+1 2   <=   0.13110911607052333
+2 b
+3 4   <=   0.020078786722572683
+6 b
+7 g
+Trening preciznost:  0.8765957446808511
+Test preciznost:  0.896551724137931
+
+
+Broj iteracije:  2
+1 23   <=   -0.9905558592960377
+2 b
+3 2   >=   0.19370313961220864
+6 g
+7 b
+Trening preciznost:  0.8553191489361702
+Test preciznost:  0.8620689655172413
+
+
+Broj iteracije:  3
+1 2   >=   0.20904999051666295
+2 3   >=   -0.624843094848962
+4 g
+5 b
+3 b
+Trening preciznost:  0.8595744680851064
+Test preciznost:  0.853448275862069
+
+
+Broj iteracije:  4
+1 2   >=   0.19037847195193414
+2 31   >=   -0.9778717486004229
+4 g
+5 b
+3 b
+Trening preciznost:  0.8425531914893617
+Test preciznost:  0.8362068965517241
+
+
+Broj iteracije:  5
+1 4   >=   0.003932486648725808
+2 5   <   -0.8294372549910913
+4 b
+5 g
+3 b
+Trening preciznost:  0.8765957446808511
+Test preciznost:  0.8706896551724138
+
+
+Broj iteracije:  6
+1 2   >   0.18847736213178568
+2 g
+3 b
+Trening preciznost:  0.8127659574468085
+Test preciznost:  0.8103448275862069
+
+
+Broj iteracije:  7
+1 4   >   0.031152581512855715
+2 13   <=   -0.6400743289314847
+4 b
+5 g
+3 b
+Trening preciznost:  0.8723404255319149
+Test preciznost:  0.8793103448275862
+
+
+Broj iteracije:  8
+1 2   >   0.11680666468279632
+2 4   <=   0.016034986078915958
+4 b
+5 g
+3 b
+Trening preciznost:  0.8765957446808511
+Test preciznost:  0.896551724137931
+
+
+Broj iteracije:  9
+1 5   <   -0.8834691452093839
+2 b
+3 2   >   0.18700207822628978
+6 g
+7 b
+Trening preciznost:  0.8638297872340426
+Test preciznost:  0.8448275862068966
+
+
+Broj iteracije:  10
+1 3   <=   -0.6915031913344949
+2 b
+3 6   >   0.015929180265715992
+6 g
+7 b
+Trening preciznost:  0.8553191489361702
+Test preciznost:  0.8620689655172413
+
+
+Broj iteracije:  11
+1 4   <=   0.030700891560206056
+2 b
+3 27   >=   0.9616495062370565
+6 b
+7 g
+Trening preciznost:  0.8638297872340426
+Test preciznost:  0.8793103448275862
+
+
+Broj iteracije:  12
+1 6   <=   0.012707761800946127
+2 b
+3 0   >   0
+6 g
+7 b
+Trening preciznost:  0.851063829787234
+Test preciznost:  0.8620689655172413
+
+
+Broj iteracije:  13
+1 2   <   0.18956994829316054
+2 b
+3 30   >=   -0.9172500143344688
+6 g
+7 b
+Trening preciznost:  0.8297872340425532
+Test preciznost:  0.8620689655172413
+
+
+Broj iteracije:  14
+1 4   <   0.021191369337614674
+2 b
+3 9   >   -0.5442571470607358
+6 g
+7 b
+Trening preciznost:  0.8595744680851064
+Test preciznost:  0.8448275862068966
+
+Broj iteracije: 15
+1 13   <=   -0.5229693379069864
+2 b
+3 4   >   0.14351805337073276
+6 g
+7 b
+Trening preciznost:  0.8723404255319149
+Test preciznost:  0.896551724137931
+
+
+
+#IRIS, 100 u populaciji, sa ponovljenom podelom na test i trening
+#Verzija 1
+
+Broj iteracije:  1
+1 Petal_Length   >=   2.9998405343633854
+2 Petal_Width   >=   1.6702963146589702
+4 virginica
+5 versicolor
+3 setosa
+Trening preciznost:  0.95
+Test preciznost:  0.98
+
+
+Broj iteracije:  2
+1 Petal_Width   <   0.7780748727662897
+2 setosa
+3 Sepal_Width   <=   4.233468430637455
+6 Petal_Width   >   1.5928461103911074
+12 virginica
+13 versicolor
+7 Petal_Width   <=   1.5928461103911074
+14 virginica
+15 versicolor
+Trening preciznost:  0.94
+Test preciznost:  0.96
+
+
+Broj iteracije:  3
+1 Petal_Width   >=   0.9153292541470542
+2 versicolor
+3 setosa
+Trening preciznost:  0.67
+Test preciznost:  0.66
+
+
+Broj iteracije:  4
+1 Petal_Width   >   0.6556296795632213
+2 Sepal_Length   <   7.0006759131583
+4 Petal_Width   <=   1.6156979140733436
+8 versicolor
+9 virginica
+5 Petal_Width   <=   0.3418444592860359
+10 versicolor
+11 virginica
+3 setosa
+Trening preciznost:  0.96
+Test preciznost:  0.98
+
+
+Broj iteracije:  5
+1 Petal_Length   >   4.779839004681753
+2 virginica
+3 Petal_Length   <=   2.293846357714477
+6 setosa
+7 versicolor
+Trening preciznost:  0.96
+Test preciznost:  0.94
+
+
+Broj iteracije:  6
+1 Sepal_Width   >   2.9395544246434193
+2 Petal_Length   >   3.0033472938906796
+4 Petal_Length   >   4.717848564372853
+8 virginica
+9 versicolor
+5 Petal_Width   ==   2.413931617999602
+10 setosa
+11 setosa
+3 Petal_Length   >=   3.0033472938906796
+6 Petal_Length   >   4.717848564372853
+12 virginica
+13 versicolor
+7 Petal_Width   ==   2.413931617999602
+14 setosa
+15 setosa
+Trening preciznost:  0.96
+Test preciznost:  0.92
+
+
+Broj iteracije:  7
+1 Sepal_Length   <   6.299892397580764
+2 Petal_Length   >=   2.598128994976368
+4 versicolor
+5 setosa
+3 virginica
+Trening preciznost:  0.81
+Test preciznost:  0.84
+
+
+Broj iteracije:  8
+1 Petal_Length   >   2.283169356819136
+2 Petal_Length   <=   4.833705863662825
+4 versicolor
+5 virginica
+3 setosa
+Trening preciznost:  0.96
+Test preciznost:  0.94
+
+
+Broj iteracije:  9
+1 Petal_Length   <   3.0403596948542684
+2 setosa
+3 Petal_Length   <   4.858355347307889
+6 versicolor
+7 virginica
+Trening preciznost:  0.96
+Test preciznost:  0.92
+
+
+Broj iteracije:  10
+1 Petal_Width   <=   0.9485110004308874
+2 setosa
+3 Petal_Length   >=   4.862872956977551
+6 virginica
+7 versicolor
+Trening preciznost:  0.96
+Test preciznost:  0.94
+
+
+Broj iteracije:  11
+1 Petal_Width   <   1.651421050830511
+2 Petal_Length   <   2.6076746465584946
+4 setosa
+5 Petal_Length   >   4.870137333682695
+10 virginica
+11 versicolor
+3 virginica
+Trening preciznost:  0.98
+Test preciznost:  0.94
+
+
+Broj iteracije:  12
+1 Petal_Length   <=   3.2277239810463896
+2 setosa
+3 Petal_Width   >=   1.7853517976152578
+6 virginica
+7 versicolor
+Trening preciznost:  0.95
+Test preciznost:  0.96
+
+
+Broj iteracije:  13
+1 Petal_Length   <   2.2445934771635496
+2 setosa
+3 Petal_Length   <   4.862057973491185
+6 versicolor
+7 virginica
+Trening preciznost:  0.96
+Test preciznost:  0.94
+
+
+Broj iteracije:  14
+1 Petal_Length   <=   3.247840038804818
+2 setosa
+3 Petal_Width   >=   1.7704695825948062
+6 virginica
+7 Petal_Length   >=   4.933005865621891
+14 virginica
+15 versicolor
+Trening preciznost:  0.97
+Test preciznost:  0.96
+
+
+Broj iteracije:  15
+1 Petal_Length   >=   3.1801375256135915
+2 Petal_Width   <   1.7577468588477565
+4 versicolor
+5 virginica
+3 setosa
+Trening preciznost:  0.95
+Test preciznost:  0.96
+
+
+
+#IRIS, 100 u populaciji, sa ponovljenom podelom na test i trening
+#Verzija 2
+
+Broj iteracije:  1
+1 Petal_Length   <   2.3500096544466222
+2 setosa
+3 Petal_Length   <   4.898135567567837
+6 versicolor
+7 virginica
+Trening preciznost:  0.95
+Test preciznost:  0.96
+
+
+Broj iteracije:  2
+1 Petal_Length   >   2.3121790753264237
+2 Sepal_Width   >=   2.9845318444154567
+4 virginica
+5 versicolor
+3 setosa
+Trening preciznost:  0.74
+Test preciznost:  0.78
+
+
+Broj iteracije:  3
+1 Petal_Length   >   2.1067531323710575
+2 Petal_Length   <=   4.912696618047663
+4 versicolor
+5 virginica
+3 setosa
+Trening preciznost:  0.95
+Test preciznost:  0.94
+
+
+Broj iteracije:  4
+1 Petal_Length   >   4.861063184899143
+2 virginica
+3 Petal_Width   <   0.7313056265517446
+6 setosa
+7 versicolor
+Trening preciznost:  0.95
+Test preciznost:  0.96
+
+
+Broj iteracije:  5
+1 Petal_Length   <   2.8049159328013573
+2 setosa
+3 Petal_Width   >   1.6305564923019757
+6 virginica
+7 versicolor
+Trening preciznost:  0.98
+Test preciznost:  0.92
+
+
+Broj iteracije:  6
+1 Petal_Length   <=   4.806037227964678
+2 Petal_Length   >=   2.3398768842239592
+4 versicolor
+5 setosa
+3 virginica
+Trening preciznost:  0.95
+Test preciznost:  0.96
+
+
+Broj iteracije:  7
+1 Petal_Width   <   0.6147798325720191
+2 setosa
+3 Sepal_Length   >=   6.265683081397188
+6 virginica
+7 versicolor
+Trening preciznost:  0.83
+Test preciznost:  0.8
+
+
+Broj iteracije:  8
+1 Petal_Width   <=   1.6924676210798444
+2 Sepal_Length   <=   5.415704829886089
+4 setosa
+5 versicolor
+3 virginica
+Trening preciznost:  0.92
+Test preciznost:  0.82
+
+
+Broj iteracije:  9
+1 Sepal_Width   <   2.9995235205620396
+2 versicolor
+3 Petal_Length   >   3.6088145499461595
+6 virginica
+7 setosa
+Trening preciznost:  0.72
+Test preciznost:  0.78
+
+
+Broj iteracije:  10
+1 Petal_Length   <   2.1479017500346567
+2 setosa
+3 Petal_Width   <=   1.6110767337224752
+6 versicolor
+7 virginica
+Trening preciznost:  0.98
+Test preciznost:  0.9
+
+
+Broj iteracije:  11
+1 Petal_Width   <=   0.8192137116340222
+2 setosa
+3 Sepal_Length   <   6.23908034337534
+6 versicolor
+7 virginica
+Trening preciznost:  0.83
+Test preciznost:  0.8
+
+
+Broj iteracije:  12
+1 Petal_Width   >   1.7697211446971064
+2 virginica
+3 Sepal_Length   <=   5.4090755460393884
+6 setosa
+7 versicolor
+Trening preciznost:  0.92
+Test preciznost:  0.82
+
+
+Broj iteracije:  13
+1 Petal_Length   <=   2.8480332703597036
+2 setosa
+3 Petal_Length   >   4.819628134447244
+6 virginica
+7 versicolor
+Trening preciznost:  0.95
+Test preciznost:  0.96
+
+
+Broj iteracije:  14
+1 Sepal_Width   >   2.9050759610986594
+2 Petal_Width   >=   1.4525330074149496
+4 virginica
+5 setosa
+3 versicolor
+Trening preciznost:  0.72
+Test preciznost:  0.78
+
+
+Broj iteracije:  15
+1 Sepal_Length   >=   6.286766362042149
+2 virginica
+3 Petal_Width   >=   0.962358717524955
+6 versicolor
+7 setosa
+Trening preciznost:  0.83
+Test preciznost:  0.8
+
+
+#PIMA, 100 u populaciji, sa ponovljenom podelom na test i trening
+#Verzija 1
+
+Broj iteracije:  1
+1 1   >   143
+2 1
+3 2   <   117
+6 2   <   96
+12 0
+13 1
+7 2   >=   39
+14 0
+15 0
+Trening preciznost:  0.7529182879377432
+Test preciznost:  0.7362204724409449
+
+
+Broj iteracije:  2
+1 1   >   132
+2 1
+3 7   <   51
+6 0
+7 0   >   1
+14 0
+15 1
+Trening preciznost:  0.7509727626459144
+Test preciznost:  0.7165354330708661
+
+
+Broj iteracije:  3
+1 1   >   129
+2 7   <   23
+4 0
+5 1
+3 0
+Trening preciznost:  0.7587548638132295
+Test preciznost:  0.7204724409448819
+
+
+Broj iteracije:  4
+1 1   <=   158
+2 7   <=   52
+4 7   >   42
+8 1
+9 0
+5 0
+3 1
+Trening preciznost:  0.7723735408560312
+Test preciznost:  0.7086614173228346
+
+
+Broj iteracije:  5
+1 1   >=   144
+2 5   >   23.347822068887915
+4 3   >=   74
+8 1
+9 1
+5 0
+3 5   >=   47.99121311880079
+6 3   ==   70
+12 1
+13 1
+7 0
+Trening preciznost:  0.7607003891050583
+Test preciznost:  0.7598425196850394
+
+
+Broj iteracije:  6
+1 1   <=   143
+2 4   <   480
+4 0
+5 1
+3 7   !=   37
+6 1
+7 0
+Trening preciznost:  0.7568093385214008
+Test preciznost:  0.7519685039370079
+
+
+Broj iteracije:  7
+1 1   <=   143
+2 0   >   5
+4 0   <=   13
+8 0   >=   1
+16 0
+17 0
+9 0   >   5
+18 1
+19 0
+5 0   >   2
+10 0
+11 0
+3 1
+Trening preciznost:  0.7509727626459144
+Test preciznost:  0.7559055118110236
+
+
+Broj iteracije:  8
+1 5   <   29.71970419204668
+2 0
+3 1   >=   22
+6 1   <=   129
+12 0
+13 1
+7 1
+Trening preciznost:  0.7762645914396887
+Test preciznost:  0.7480314960629921
+
+
+Broj iteracije:  9
+1 1   <   144
+2 4   >=   588
+4 1
+5 0
+3 1
+Trening preciznost:  0.7509727626459144
+Test preciznost:  0.7519685039370079
+
+
+Broj iteracije:  10
+1 0   >   13
+2 1
+3 1   >=   144
+6 1
+7 0
+Trening preciznost:  0.7509727626459144
+Test preciznost:  0.7559055118110236
+
+
+Broj iteracije:  11
+1 0   <=   13
+2 1   >=   140
+4 1
+5 0
+3 1
+Trening preciznost:  0.7490272373540856
+Test preciznost:  0.7480314960629921
+
+
+Broj iteracije:  12
+1 0   >=   7
+2 7   <=   55
+4 1
+5 0
+3 6   >   0.8055763500851281
+6 6   >   0.1880711691998369
+12 7   <   35
+24 6   >   0.7114209700267319
+48 6   <   1.39356079350266
+96 6   >=   0.3437814795247333
+192 6   >   0.20271207817713505
+384 6   >=   1.1553868199914692
+768 6   >   1.1553868199914692
+1536 6   <   1.3775181319117376
+3072 1
+3073 0
+1537 0
+769 0
+385 0
+193 0
+97 0
+49 0
+25 0
+13 0
+7 0
+Trening preciznost:  0.7003891050583657
+Test preciznost:  0.6968503937007874
+
+
+Broj iteracije:  13
+1 4   <=   96
+2 1   >=   144
+4 7   >=   63
+8 1   <=   155
+16 1   >=   144
+32 1
+33 0
+17 0
+9 1
+5 0
+3 7   <   41
+6 1   >   155
+12 7   >=   37
+24 7   <=   77
+48 1
+49 1
+25 1
+13 0
+7 1
+Trening preciznost:  0.7782101167315175
+Test preciznost:  0.7480314960629921
+
+
+Broj iteracije:  14
+1 1   >   143
+2 1
+3 0
+Trening preciznost:  0.7490272373540856
+Test preciznost:  0.7519685039370079
+
+
+Broj iteracije:  15
+1 0   >=   15
+2 1
+3 1   >   143
+6 1
+7 4   <   488
+14 0
+15 1
+Trening preciznost:  0.7529182879377432
+Test preciznost:  0.7519685039370079
+
+
+
+#PIMA, 100 u populaciji, sa ponovljenom podelom na test i trening
+#Verzija 2
+
+Broj iteracije:  1
+1 1   <=   1445
+2 0   !=   11
+4 0
+5 1
+3 1
+Trening preciznost:  0.7626459143968871
+Test preciznost:  0.7283464566929134
+
+
+Broj iteracije:  2
+1 1   >=   146
+2 1
+3 0
+Trening preciznost:  0.7587548638132295
+Test preciznost:  0.7165354330708661
+
+
+Broj iteracije:  3
+1 1   >   144
+2 1
+3 6   >   1.1025075133378672
+6 1
+7 0
+Trening preciznost:  0.7645914396887159
+Test preciznost:  0.7283464566929134
+
+
+Broj iteracije:  4
+1 1   >   144
+2 1
+3 0   <=   12
+6 0
+7 1
+Trening preciznost:  0.7607003891050583
+Test preciznost:  0.7322834645669292
+
+
+Broj iteracije:  5
+1 1   >   145
+2 1
+3 0
+Trening preciznost:  0.7587548638132295
+Test preciznost:  0.7165354330708661
+
+
+Broj iteracije:  6
+1 1   >=   145
+2 3   ==   43
+4 0
+5 1
+3 0
+Trening preciznost:  0.7607003891050583
+Test preciznost:  0.7283464566929134
+
+Broj iteracije:  7
+1 1   >   143
+2 1   !=   154
+4 1
+5 0
+3 0
+Trening preciznost:  0.7665369649805448
+Test preciznost:  0.7322834645669292
+
+
+Broj iteracije:  8
+1 1   >=   144
+2 0   ==   13
+4 0
+5 1
+3 0
+Trening preciznost:  0.7645914396887159
+Test preciznost:  0.7204724409448819
+
+
+Broj iteracije:  9
+1 1   <=   144
+2 0   <=   10
+4 0
+5 1
+3 1
+Trening preciznost:  0.7704280155642024
+Test preciznost:  0.7125984251968503
+
+
+Broj iteracije:  10
+1 0   <   0
+2 0
+3 1   >   147
+6 1
+7 0
+Trening preciznost:  0.7607003891050583
+Test preciznost:  0.7125984251968503
+
+
+Broj iteracije:  11
+1 0   >=   11
+2 1
+3 1   <=   144
+6 0
+7 1
+Trening preciznost:  0.7704280155642024
+Test preciznost:  0.7125984251968503
+
+
+Broj iteracije:  12
+1 1   <   144
+2 0   >=   11
+4 1
+5 0
+3 1
+Trening preciznost:  0.7704280155642024
+Test preciznost:  0.7165354330708661
+
+
+Broj iteracije:  13
+1 1   >   144
+2 1
+3 0   <   11
+6 0
+7 1
+Trening preciznost:  0.7704280155642024
+Test preciznost:  0.7125984251968503
+
+
+Broj iteracije:  14
+1 1   >=   131
+2 7   <   62
+4 1
+5 0
+3 0
+Trening preciznost:  0.7587548638132295
+Test preciznost:  0.7204724409448819
+
+
+Broj iteracije:  15
+1 1   >=   144
+2 1
+3 4   >   500
+6 1
+7 0
+Trening preciznost:  0.7509727626459144
+Test preciznost:  0.7519685039370079
+
+
+#IRIS, Verzija 0
+
+Broj iteracije:  1
+1 Petal_Length   <=   4.945009086850081
+2 Petal_Length   >=   2.8269288301941904
+4 Petal_Length   >=   1.0113769535288606
+8 Petal_Length   <   2.8269288301941904
+16 Petal_Width   >=   1.4262398787001087
+32 Petal_Width   <   1.5544805522102552
+64 setosa
+65 setosa
+33 versicolor
+17 Petal_Width   >   1.6315896669327234
+34 Petal_Width   ==   0.7810352848610744
+68 versicolor
+69 virginica
+35 versicolor
+9 virginica
+5 setosa
+3 virginica
+Trening preciznost:  0.98
+Test preciznost:  0.98
+
+
+Broj iteracije:  2
+1 Petal_Width   >=   1.6613386094792955
+2 Petal_Width   <=   1.4478740228220501
+4 setosa
+5 virginica
+3 Petal_Width   <   0.8711616977555754
+6 setosa
+7 versicolor
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  3
+1 Petal_Length   >=   2.4329327388658397
+2 Petal_Length   >   2.703149580498801
+4 Petal_Width   >=   1.6063802132744909
+8 Petal_Length   <=   3.0521507185568337
+16 setosa
+17 virginica
+9 versicolor
+5 Sepal_Width   !=   2.6278991598037305
+10 versicolor
+11 versicolor
+3 Sepal_Length   >=   7.5261718646426505
+6 Sepal_Length   <   7.761415125898622
+12 Petal_Length   >   3.9413366709653896
+24 setosa
+25 virginica
+13 virginica
+7 setosa
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  4
+1 Petal_Length   >   2.1410307008728733
+2 Petal_Length   <=   4.816662005497625
+4 versicolor
+5 Petal_Length   <=   1.42260261353809
+10 versicolor
+11 Sepal_Length   <   6.353971522272632
+22 virginica
+23 Petal_Length   <   2.5220942225920773
+46 versicolor
+47 Petal_Length   <=   5.096024650216031
+94 Petal_Length   >=   1.1578237542750194
+188 versicolor
+189 Petal_Length   <   2.5220942225920773
+378 versicolor
+379 setosa
+95 Sepal_Length   <   5.736150728574953
+190 virginica
+191 Petal_Length   <=   4.9150142110388035
+382 virginica
+383 virginica
+3 setosa
+Trening preciznost:  0.96
+Test preciznost:  0.98
+
+
+Broj iteracije:  5
+1 Petal_Length   <=   2.0455319724511423
+2 Petal_Length   <   2.1550108005415596
+4 setosa
+5 Sepal_Length   >=   6.8511943773398905
+10 versicolor
+11 Sepal_Length   <=   6.052699420208116
+22 virginica
+23 setosa
+3 Petal_Width   <=   1.619242461078558
+6 Petal_Length   <=   4.933917778751255
+12 Petal_Width   <=   1.619242461078558
+24 versicolor
+25 Petal_Width   <=   0.21612329746377562
+50 Petal_Width   <=   2.4557865649526613
+100 setosa
+101 virginica
+51 virginica
+13 Sepal_Width   >=   3.391992768846712
+26 versicolor
+27 Sepal_Width   <   2.7395443080312583
+54 virginica
+55 versicolor
+7 virginica
+Trening preciznost:  0.98
+Test preciznost:  0.94
+
+
+Broj iteracije:  6
+1 Petal_Length   <=   4.874434514562857
+2 Petal_Width   >   0.9189850136747532
+4 versicolor
+5 setosa
+3 virginica
+Trening preciznost:  0.95
+Test preciznost:  0.96
+
+
+Broj iteracije:  7
+1 Petal_Length   >=   2.851238259940736
+2 Petal_Width   <=   1.635147954617793
+4 versicolor
+5 virginica
+3 setosa
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  8
+1 Petal_Width   >   0.9509601204867126
+2 Petal_Width   <=   1.6201485452646394
+4 Petal_Length   >   5.32083414204158
+8 virginica
+9 Sepal_Width   >   4.141397634263724
+18 versicolor
+19 versicolor
+5 virginica
+3 Sepal_Width   >   2.3784832423920883
+6 setosa
+7 Petal_Width   >   2.0127247241671316
+14 virginica
+15 versicolor
+Trening preciznost:  0.98
+Test preciznost:  0.94
+
+
+Broj iteracije:  9
+1 Petal_Width   >   0.9857235405089412
+2 Petal_Width   <   1.6466700695766094
+4 versicolor
+5 virginica
+3 Petal_Length   !=   4.851094279819865
+6 setosa
+7 virginica
+Trening preciznost:  0.97
+Test preciznost:  0.94
+
+
+Broj iteracije:  10
+1 Petal_Width   >   1.62796730249765
+2 virginica
+3 Sepal_Width   <=   3.0198359457733535
+6 Petal_Width   >   0.9679782103604204
+12 Sepal_Width   >   3.314175450878926
+24 versicolor
+25 versicolor
+13 Sepal_Width   <=   2.518998910588051
+26 virginica
+27 setosa
+7 Petal_Width   >   1.3766595566373236
+14 versicolor
+15 Petal_Width   !=   2.1734742673123937
+30 setosa
+31 setosa
+Trening preciznost:  0.97
+Test preciznost:  0.92
+
+
+Broj iteracije:  11
+1 Petal_Length   <   3.0259673589008895
+2 setosa
+3 Petal_Length   >=   3.9504790840141872
+6 Petal_Length   <=   4.8097293598679745
+12 Sepal_Length   <=   7.059035464442674
+24 Sepal_Length   >   5.279776606722899
+48 versicolor
+49 Sepal_Length   <   7.37685420166831
+98 virginica
+99 virginica
+25 virginica
+13 Petal_Width   >=   1.7625081656848647
+26 virginica
+27 versicolor
+7 versicolor
+Trening preciznost:  0.97
+Test preciznost:  0.92
+
+
+Broj iteracije:  12
+1 Petal_Length   >=   4.843254526347666
+2 virginica
+3 Sepal_Width   <=   2.438840466761466
+6 versicolor
+7 Sepal_Width   <   3.656427709287724
+14 Sepal_Width   >   2.0646572132315555
+28 Sepal_Width   <=   2.438840466761466
+56 versicolor
+57 Sepal_Width   <   2.0646572132315555
+114 Petal_Length   >=   2.653053300240587
+228 Petal_Length   <=   4.24828821520563
+456 versicolor
+457 virginica
+229 setosa
+115 Sepal_Width   <   2.560905879558675
+230 virginica
+231 Sepal_Width   <   2.9389131837392943
+462 versicolor
+463 Sepal_Width   <   2.560905879558675
+926 versicolor
+927 Sepal_Width   <   2.845651542701444
+1854 versicolor
+1855 Sepal_Length   <=   5.548573682431782
+3710 setosa
+3711 versicolor
+29 Sepal_Width   <   2.7704983857083643
+58 Sepal_Length   <   5.556371751570917
+116 Petal_Length   >   3.41602412634938
+232 virginica
+233 Petal_Length   <   5.59375611508602
+466 setosa
+467 setosa
+117 versicolor
+59 Sepal_Length   <   5.556371751570917
+118 Petal_Length   >=   3.41602412634938
+236 Petal_Length   <=   4.24828821520563
+472 versicolor
+473 virginica
+237 Petal_Length   >   5.476597796878574
+474 versicolor
+475 setosa
+119 versicolor
+15 Sepal_Width   <   2.560905879558675
+30 versicolor
+31 Sepal_Width   <   2.9389131837392943
+62 versicolor
+63 Petal_Length   >=   3.41602412634938
+126 Sepal_Width   <   2.560905879558675
+252 versicolor
+253 Sepal_Length   <   7.099660734126793
+506 versicolor
+507 versicolor
+127 setosa
+Trening preciznost:  0.96
+Test preciznost:  0.84
+
+
+Broj iteracije:  13
+1 Petal_Width   >   1.6967742802900985
+2 virginica
+3 Petal_Length   >=   5.969975818830201
+6 versicolor
+7 Petal_Length   >   5.450075372733032
+14 Petal_Length   >=   5.073408601487626
+28 Petal_Length   >=   3.278383086274583
+56 Sepal_Length   <=   4.622918885286012
+112 setosa
+113 virginica
+57 Petal_Length   <=   4.134173088837302
+114 versicolor
+115 setosa
+29 Petal_Length   >=   2.3722145674051394
+58 versicolor
+59 Petal_Length   >   5.491779215420507
+118 setosa
+119 setosa
+15 Petal_Length   >=   2.529163902154051
+30 Petal_Length   <   3.046354529504449
+60 versicolor
+61 Petal_Length   >=   4.451139280175113
+122 versicolor
+123 versicolor
+31 setosa
+Trening preciznost:  0.98
+Test preciznost:  0.96
+
+
+Broj iteracije:  14
+1 Petal_Width   <   0.6030423472952171
+2 Petal_Width   <   0.7886608483469254
+4 Sepal_Length   <=   4.70878299231041
+8 setosa
+9 setosa
+5 Sepal_Width   <   3.5840990251712737
+10 Sepal_Length   >   7.623951340997838
+20 Sepal_Length   <   5.314630465315633
+40 virginica
+41 virginica
+21 setosa
+11 Sepal_Length   >   5.168489354923724
+22 Petal_Width   <   2.2094921041900273
+44 setosa
+45 virginica
+23 setosa
+3 Petal_Length   >   4.807786113152087
+6 virginica
+7 Sepal_Length   >=   5.136345678150167
+14 versicolor
+15 Petal_Width   <=   1.161402799866001
+30 Sepal_Length   <   4.756358501259606
+60 versicolor
+61 versicolor
+31 Sepal_Length   >=   7.449962485862837
+62 Sepal_Length   >   5.168489354923724
+124 Petal_Width   <   1.0621088594079229
+248 setosa
+249 virginica
+125 setosa
+63 virginica
+Trening preciznost:  0.96
+Test preciznost:  0.96
+
+
+Broj iteracije:  15
+1 Petal_Width   >=   1.6808388402713743
+2 Petal_Width   !=   0.8887576764979676
+4 virginica
+5 Petal_Length   >   5.343426332790844
+10 virginica
+11 virginica
+3 Petal_Width   >   0.7830766558894716
+6 Petal_Length   >   5.578316205040289
+12 virginica
+13 versicolor
+7 setosa
+Trening preciznost:  0.98
+Test preciznost:  0.96
+
+
+
+#IONOSPHERE, Verzija 0
+
+Broj iteracije:  1
+1 5   >=   -0.9522847734826896
+2 4   >   0.1253070733679469
+4 24   >   0.2660783396004376
+8 24   <   -0.1592164620718428
+16 b
+17 g
+9 17   >   -0.40103268958057336
+18 g
+19 b
+5 4   >=   0.8897339247300413
+10 16   >=   -0.27328960338507424
+20 g
+21 b
+11 16   ==   -0.46250319546730445
+22 g
+23 b
+3 16   ==   -0.46250319546730445
+6 g
+7 15   !=   0.800059523228307
+14 b
+15 16   >   0.5715177108718972
+30 b
+31 18   <   0.14641339297595812
+62 g
+63 g
+Trening preciznost:  0.8978723404255319
+Test preciznost:  0.8706896551724138
+
+
+Broj iteracije:  2
+1 2   >=   0.18771573590013713
+2 18   <=   -0.6723818012825815
+4 29   <=   0.6642188310057495
+8 g
+9 b
+5 18   <   -0.01941632952499517
+10 g
+11 14   <=   0.25359313482470647
+22 8   <=   0.4505458207372528
+44 7   <   0.9900740011856277
+88 b
+89 g
+45 b
+23 18   <=   -0.6723818012825815
+46 g
+47 18   <   0.8339796403365989
+94 4   >=   -0.6158720461177982
+188 g
+189 b
+95 18   <=   -0.6723818012825815
+190 g
+191 18   <   0.8339796403365989
+382 g
+383 7   <   -0.3608947716755735
+766 21   ==   -0.9675931834751501
+1532 b
+1533 b
+767 g
+3 b
+Trening preciznost:  0.9361702127659575
+Test preciznost:  0.8879310344827587
+
+
+Broj iteracije:  3
+1 4   <   0.019635874154479538
+2 b
+3 2   <=   0.2191852260254996
+6 2   >   0.1371447234234242
+12 26   <=   -0.7010201056207144
+24 31   >=   -0.3718338543454689
+48 b
+49 g
+25 2   >   0.006082806845655986
+50 g
+51 14   >   -0.7100947683780501
+102 7   !=   -0.04929516671184109
+204 g
+205 b
+103 g
+13 b
+7 2   >   0.45989458290258955
+14 26   <=   0.9199390471808695
+28 6   <   -0.6397155324229014
+56 b
+57 7   !=   0.6175764327607423
+114 g
+115 b
+29 31   >=   0.7009248217426383
+58 b
+59 g
+15 7   !=   0.19718652023418026
+30 g
+31 b
+Trening preciznost:  0.9191489361702128
+Test preciznost:  0.896551724137931
+
+
+Broj iteracije:  4
+1 4   >=   0.11502477477575246
+2 23   <   0.950389194130365
+4 23   >   -0.9420954036784277
+8 g
+9 23   <=   0.0978622309417938
+18 23   <   0.950389194130365
+36 25   <=   0.6414886891347731
+72 b
+73 b
+37 2   <=   0.4221057989138395
+74 b
+75 b
+19 12   <   0.8279054585190673
+38 14   >=   -0.8791044548359357
+76 b
+77 g
+39 b
+5 6   <=   -0.3549420180769953
+10 g
+11 12   <   0.8279054585190673
+22 b
+23 b
+3 b
+Trening preciznost:  0.9148936170212766
+Test preciznost:  0.8706896551724138
+
+
+Broj iteracije:  5
+1 3   >=   -0.4269943941187633
+2 19   <=   0.9758204177338576
+4 5   <=   -0.19479290391370596
+8 b
+9 g
+5 b
+3 0   <   0
+6 32   !=   0.6089451916839228
+12 b
+13 g
+7 8   >   -0.8506400630051931
+14 b
+15 b
+Trening preciznost:  0.8085106382978723
+Test preciznost:  0.7844827586206896
+
+
+Broj iteracije:  6
+1 3   <   -0.43594982950445216
+2 b
+3 28   <   0.027041185255668676
+6 6   >   0.3011277945911375
+12 4   <   0.38777192305835473
+24 b
+25 g
+13 b
+7 3   <   0.7733040784036613
+14 g
+15 3   <   0.7733040784036613
+30 0   <=   0
+60 8   <   -0.08553107511676772
+120 g
+121 b
+61 3   <   0.7733040784036613
+122 g
+123 28   <=   0.4379259762223773
+246 b
+247 b
+31 3   <   -0.25976985930501617
+62 b
+63 3   <   0.5130392798384731
+126 33   >   -0.5763685254460758
+252 g
+253 g
+127 3   <=   0.08821809981236961
+254 g
+255 b
+Trening preciznost:  0.8936170212765957
+Test preciznost:  0.853448275862069
+
+
+Broj iteracije:  7
+1 7   <   -0.862125091552032
+2 b
+3 3   <=   -0.6585226152397079
+6 b
+7 3   <   -0.5483156120530859
+14 3   <=   -0.4594077726474557
+28 8   >=   -0.9510891410875346
+56 b
+57 g
+29 3   >   -0.5483156120530859
+58 b
+59 0   <=   0
+118 3   <   -0.17314199531440577
+236 b
+237 4   >   -0.21869284996541682
+474 g
+475 b
+119 4   >   -0.21869284996541682
+238 g
+239 b
+15 3   <   -0.7602817136791613
+30 b
+31 3   <   -0.5483156120530859
+62 3   <=   -0.4594077726474557
+124 8   >=   -0.9510891410875346
+248 b
+249 g
+125 3   >   -0.5483156120530859
+250 b
+251 3   <   -0.08425606458646451
+502 b
+503 3   <   0.140702168455765
+1006 3   <   -0.5483156120530859
+2012 17   ==   -0.21996235374704498
+4024 g
+4025 14   ==   -0.5751746199136305
+8050 b
+8051 b
+2013 3   <=   0.4397568718012621
+4026 26   >   -0.6792934353076778
+8052 14   >   -0.592281499266458
+16104 b
+16105 b
+8053 16   >   -0.04719653645380961
+16106 b
+16107 b
+4027 0   <=   0
+8054 b
+8055 g
+1007 3   <   -0.4127862858862368
+2014 b
+2015 0   ==   0
+4030 b
+4031 g
+63 3   <   -0.7602817136791613
+126 b
+127 0   <=   0
+254 3   <   -0.8036699629517374
+508 b
+509 3   <   -0.4594077726474557
+1018 3   <=   -0.4127862858862368
+2036 b
+2037 0   ==   0
+4074 b
+4075 g
+1019 3   <   -0.5483156120530859
+2038 b
+2039 3   <   -0.7602817136791613
+4078 0   <=   0
+8156 g
+8157 g
+4079 30   !=   0.8256891213646884
+8158 b
+8159 b
+255 4   >   0.2037141212828859
+510 g
+511 b
+Trening preciznost:  0.9191489361702128
+Test preciznost:  0.9051724137931034
+
+
+Broj iteracije:  8
+1 4   <=   0.14898572651607056
+2 b
+3 7   <   -0.926150474989335
+6 b
+7 0   >   0
+14 g
+15 b
+Trening preciznost:  0.9191489361702128
+Test preciznost:  0.9051724137931034
+
+
+Broj iteracije:  9
+1 2   <=   0.16431709622860335
+2 b
+3 3   >=   -0.3873002189088952
+6 4   >   0.4193748869086189
+12 g
+13 26   <=   0.7241245677874868
+26 4   >   -0.2040377562305158
+52 3   >=   -0.7919909047908951
+104 g
+105 b
+53 b
+27 b
+7 b
+Trening preciznost:  0.9234042553191489
+Test preciznost:  0.8620689655172413
+
+Broj iteracije:  10
+1 6   >=   -0.6129501087723137
+2 5   >   0.8987728526334666
+4 b
+5 5   <   -0.49264917591268675
+10 5   <=   0.9955788463294675
+20 5   <=   0.07675195554670511
+40 5   <=   -0.9686959120444543
+80 b
+81 5   <=   -0.09632830851883045
+162 17   >   -0.43568826686392836
+324 b
+325 g
+163 5   >   0.8987728526334666
+326 b
+327 5   <   -0.33039717820711867
+654 19   >=   -0.14276615709901996
+1308 2   <   0.5338753014731716
+2616 b
+2617 b
+1309 b
+655 b
+41 4   >=   0.9639119530036164
+82 g
+83 b
+21 4   >=   0.3852407192993379
+42 g
+43 b
+11 5   >   0.8987728526334666
+22 19   !=   0.15014064247639736
+44 b
+45 b
+23 5   <=   -0.33039717820711867
+46 5   <=   -0.4323776133820034
+92 4   >=   0.9639119530036164
+184 g
+185 b
+93 5   <=   0.9955788463294675
+186 5   <=   -0.33039717820711867
+372 b
+373 5   <=   -0.11255013604880904
+746 10   <   0.7135272291806698
+1492 5   <=   -0.9686959120444543
+2984 b
+2985 5   >=   -0.09632830851883045
+5970 5   <=   -0.9985165676611398
+11940 b
+11941 5   >   0.8987728526334666
+23882 3   !=   -0.9927706711653392
+47764 b
+47765 g
+23883 5   <=   0.4716093173950475
+47766 10   ==   0.7135272291806698
+95532 b
+95533 g
+47767 5   <=   0.9955788463294675
+95534 11   <   -0.5350400849014159
+191068 g
+191069 b
+95535 g
+5971 5   <=   -0.9985165676611398
+11942 11   <   -0.5350400849014159
+23884 g
+23885 b
+11943 4   >=   0.09125292255667072
+23886 g
+23887 b
+1493 5   <=   -0.09632830851883045
+2986 5   <=   -0.9686959120444543
+5972 8   >   0.12867401847495064
+11944 b
+11945 g
+5973 5   >   0.8987728526334666
+11946 b
+11947 5   >   0.8987728526334666
+23894 b
+23895 5   <   -0.33039717820711867
+47790 19   !=   0.09185457158350085
+95580 b
+95581 b
+47791 5   >   0.8987728526334666
+95582 17   >=   0.4550351704018891
+191164 b
+191165 g
+95583 5   <=   -0.33039717820711867
+191166 10   ==   -0.9274112929462754
+382332 g
+382333 b
+191167 5   <=   0.9955788463294675
+382334 5   <=   -0.33039717820711867
+764668 b
+764669 5   <=   -0.09632830851883045
+1529338 10   ==   0.7135272291806698
+3058676 b
+3058677 16   <=   0.293035908172423
+6117354 b
+6117355 g
+1529339 5   <=   -0.9985165676611398
+3058678 19   <   0.3303341108994773
+6117356 10   ==   -0.9274112929462754
+12234712 g
+12234713 5   <=   -0.09632830851883045
+24469426 17   <=   0.6679021524197424
+48938852 b
+48938853 g
+24469427 5   <=   -0.9985165676611398
+48938854 5   <   -0.47155674294588246
+97877708 19   >=   0.3303341108994773
+195755416 10   ==   -0.9274112929462754
+391510832 g
+391510833 5   <   -0.33039717820711867
+783021666 19   !=   0.3303341108994773
+1566043332 b
+1566043333 b
+783021667 5   >   0.8987728526334666
+1566043334 17   >=   0.2880589512259548
+3132086668 b
+3132086669 g
+1566043335 5   <=   -0.33039717820711867
+3132086670 10   ==   -0.9274112929462754
+6264173340 g
+6264173341 b
+3132086671 5   <=   0.9955788463294675
+6264173342 5   <=   0.07675195554670511
+12528346684 5   <=   -0.9686959120444543
+25056693368 b
+25056693369 5   <=   -0.09632830851883045
+50113386738 17   >   -0.43568826686392836
+100226773476 b
+100226773477 g
+50113386739 5   >   0.21482954725794778
+100226773478 b
+100226773479 5   <   -0.33039717820711867
+200453546958 19   >=   -0.14276615709901996
+400907093916 2   <   0.5338753014731716
+801814187832 b
+801814187833 b
+400907093917 b
+200453546959 b
+12528346685 4   >=   0.9639119530036164
+25056693370 g
+25056693371 b
+6264173343 4   >=   0.3852407192993379
+12528346686 g
+12528346687 b
+195755417 b
+97877709 5   <=   0.9955788463294675
+195755418 5   <=   -0.9686959120444543
+391510836 b
+391510837 5   <=   -0.6390663064107094
+783021674 17   <=   0.900055140559257
+1566043348 b
+1566043349 g
+783021675 5   <=   -0.6970566504681703
+1566043350 11   <   -0.5350400849014159
+3132086700 g
+3132086701 5   >   -0.5252334945229347
+6264173402 g
+6264173403 g
+1566043351 4   >=   0.09125292255667072
+3132086702 g
+3132086703 b
+195755419 g
+48938855 4   >=   0.8642794966339602
+97877710 g
+97877711 b
+6117357 b
+3058679 5   >   0.8987728526334666
+6117358 b
+6117359 5   <=   -0.8649164333222212
+12234718 19   >=   0.3303341108994773
+24469436 10   ==   -0.9274112929462754
+48938872 g
+48938873 5   <   -0.33039717820711867
+97877746 4   >=   0.3852407192993379
+195755492 g
+195755493 b
+97877747 5   >   0.8987728526334666
+195755494 17   >=   0.900055140559257
+391510988 b
+391510989 g
+195755495 5   >   0.8987728526334666
+391510990 17   >=   0.900055140559257
+783021980 32   >=   0.7395777911286312
+1566043960 b
+1566043961 b
+783021981 g
+391510991 b
+24469437 b
+12234719 5   <=   0.9955788463294675
+24469438 5   <=   0.5386533633484845
+48938876 b
+48938877 5   <=   -0.9985165676611398
+97877754 11   <=   -0.39497211236714236
+195755508 18   !=   -0.3886705418063108
+391511016 g
+391511017 b
+195755509 b
+97877755 4   >=   0.09125292255667072
+195755510 g
+195755511 b
+24469439 g
+382335 5   <=   -0.9985165676611398
+764670 11   <   -0.5350400849014159
+1529340 15   <   -0.5297036839089355
+3058680 b
+3058681 g
+1529341 b
+764671 4   <=   0.09125292255667072
+1529342 g
+1529343 b
+2987 11   <   -0.5350400849014159
+5974 g
+5975 b
+747 5   <=   -0.4323776133820034
+1494 11   <=   -0.5350400849014159
+2988 g
+2989 b
+1495 4   >=   0.09125292255667072
+2990 g
+2991 b
+187 4   >=   -0.7709952713378121
+374 5   !=   0.8108911428923635
+748 g
+749 b
+375 b
+47 5   <=   0.9955788463294675
+94 5   <=   -0.33039717820711867
+188 b
+189 5   <=   -0.09632830851883045
+378 10   ==   0.7135272291806698
+756 17   ==   -0.8274994235807684
+1512 b
+1513 b
+757 5   <   -0.33039717820711867
+1514 10   ==   -0.9274112929462754
+3028 g
+3029 b
+1515 10   ==   0.6115164043665302
+3030 b
+3031 g
+379 5   <=   -0.9985165676611398
+758 11   >=   -0.5350400849014159
+1516 6   >=   -0.7557387692845918
+3032 b
+3033 g
+1517 b
+759 5   >   0.8987728526334666
+1518 b
+1519 5   <=   -0.33039717820711867
+3038 19   >=   0.3303341108994773
+6076 10   ==   -0.7950585752554973
+12152 b
+12153 g
+6077 b
+3039 5   <=   0.9955788463294675
+6078 5   <=   -0.9686959120444543
+12156 b
+12157 5   <=   -0.09632830851883045
+24314 17   <=   0.900055140559257
+48628 b
+48629 g
+24315 5   >   0.8987728526334666
+48630 b
+48631 5   <   -0.33039717820711867
+97262 5   <=   -0.09632830851883045
+194524 17   >   0.900055140559257
+389048 b
+389049 g
+194525 5   <=   0.9755379770241479
+389050 11   <   -0.5350400849014159
+778100 g
+778101 b
+389051 4   <   0.09125292255667072
+778102 g
+778103 b
+97263 5   >   0.8987728526334666
+194526 17   >=   -0.5883840954587365
+389052 b
+389053 g
+194527 4   >=   0.09125292255667072
+389054 g
+389055 b
+6079 g
+95 4   >=   0.3852407192993379
+190 g
+191 b
+3 b
+Trening preciznost:  0.9234042553191489
+Test preciznost:  0.896551724137931
+
+
+Broj iteracije:  11
+1 27   <=   -0.9217160428252835
+2 3   !=   0.7213714673156213
+4 b
+5 g
+3 9   <   -0.9270228616335845
+6 b
+7 9   >   0.9848677572177333
+14 b
+15 4   >   0.05917768933097123
+30 g
+31 b
+Trening preciznost:  0.902127659574468
+Test preciznost:  0.8620689655172413
+
+
+Broj iteracije:  12
+1 0   >   0
+2 4   <   0.08697672516849697
+4 b
+5 3   >=   0.9539629740483262
+10 b
+11 3   <=   -0.6508074879116879
+22 b
+23 9   >   0.875453053479408
+46 g
+47 4   >=   0.2530529980348173
+94 9   >   -0.8234212996120764
+188 g
+189 4   <=   0.14165065128786902
+378 b
+379 27   >   -0.4862575140149712
+758 14   <   0.2936993877206897
+1516 b
+1517 b
+759 b
+95 3   >=   0.9539629740483262
+190 b
+191 3   >=   -0.8191119292855153
+382 b
+383 b
+3 b
+Trening preciznost:  0.9276595744680851
+Test preciznost:  0.9137931034482759
+
+
+Broj iteracije:  13
+1 2   >=   0.4368119727668107
+2 23   >=   0.4568485657292334
+4 23   >=   -0.9019183664453456
+8 23   >=   -0.07478998544971383
+16 23   >=   -0.3680617601864318
+32 7   >   0.07302079257510119
+64 23   >=   0.5172205014669278
+128 23   >=   -0.562758727969461
+256 7   >   -0.16881302335830561
+512 23   >=   0.5003180528088198
+1024 23   >   0.29137837798536936
+2048 23   >=   -0.8312549987640376
+4096 23   >   -0.5157202139540507
+8192 23   >   0.6262484366200425
+16384 23   >=   -0.562758727969461
+32768 7   <   0.5770136623171744
+65536 14   >   0.1083806851591187
+131072 g
+131073 b
+65537 b
+32769 g
+16385 g
+8193 g
+4097 g
+2049 g
+1025 g
+513 b
+257 9   >=   0.5967941719591665
+514 g
+515 b
+129 g
+65 b
+33 8   <   0.20658899712112677
+66 g
+67 b
+17 g
+9 g
+5 27   >=   -0.8759926578634818
+10 g
+11 b
+3 b
+Trening preciznost:  0.8936170212765957
+Test preciznost:  0.8017241379310345
+
+
+Broj iteracije:  14
+1 3   >=   0.8593562289755272
+2 b
+3 4   <   0.22071724678586424
+6 4   <   0.060302475267965505
+12 b
+13 4   <   0.22071724678586424
+26 4   <=   0.0914764215117363
+52 32   >=   -0.7181262548277929
+104 g
+105 0   ==   0
+210 b
+211 g
+53 32   !=   -0.9448989234066196
+106 17   <   -0.13699210676785545
+212 g
+213 b
+107 b
+27 4   <   0.22071724678586424
+54 6   <=   -0.041174863846340726
+108 g
+109 g
+55 g
+7 4   <   0.23461599096360208
+14 b
+15 4   <   0.0914764215117363
+30 b
+31 0   <=   0
+62 b
+63 g
+Trening preciznost:  0.9148936170212766
+Test preciznost:  0.853448275862069
+
+
+Broj iteracije:  15
+1 4   <=   0.4133191538782961
+2 22   >=   0.012003755710572106
+4 24   <=   0.19413624816756037
+8 b
+9 21   >=   -0.5950576328410062
+18 21   >=   0.4699143693548091
+36 21   >=   -0.3623121580815092
+72 21   >=   -0.21868061932347116
+144 26   <   0.9966000248220173
+288 b
+289 b
+145 g
+73 11   ==   0.9333663201319247
+146 b
+147 g
+37 22   ==   0.00462806149871775
+74 g
+75 g
+19 21   >=   0.7419653521405689
+38 26   <   0.9966000248220173
+76 3   <=   0.3028737653927016
+152 g
+153 g
+77 b
+39 g
+5 b
+3 26   <=   0.9966000248220173
+6 21   <   -0.31554319675925946
+12 21   >=   0.4699143693548091
+24 21   >=   -0.9740207203129174
+48 26   <   0.9966000248220173
+96 24   <=   0.19413624816756037
+192 22   !=   -0.19840693383498786
+384 g
+385 g
+193 10   <   0.11281370252057821
+386 24   <=   -0.5739045458017806
+772 g
+773 g
+387 g
+97 13   <   -0.432155293314463
+194 b
+195 g
+49 g
+25 g
+13 26   <   0.46140709613151376
+26 19   >=   -0.08942829151008946
+52 g
+53 21   >=   -0.00213704737868059
+106 22   >=   0.046360554924326225
+212 24   <=   0.19413624816756037
+424 b
+425 26   <   0.9966000248220173
+850 g
+851 b
+213 b
+107 g
+27 13   <   -0.6208723335107993
+54 b
+55 g
+7 b
+Trening preciznost:  0.9234042553191489
+Test preciznost:  0.9224137931034483
+```

@@ -8,6 +8,7 @@ import pandas as pd
 import copy
 from sklearn.model_selection import train_test_split
 
+"""
 data = pd.read_csv('pima-indians-diabetes.csv', header = None)
 data.columns = range(0,9)
 #data = data.drop(1, axis = 1)
@@ -15,7 +16,23 @@ column_names = data.columns
 column_names = set(column_names.drop(8))
 class_column_name = 8
 class_variable = data[8]
-data = data.drop(8, axis = 1)
+data = data.drop(8, axis = 1)"""
+
+data = pd.read_csv('ionosphere.csv', header = None)
+data.columns = range(0,35)
+data = data.drop(1, axis = 1)
+column_names = data.columns
+column_names = set(column_names.drop(34))
+class_column_name = 34
+class_variable = data[34]
+data = data.drop(34, axis = 1)
+
+"""data = pd.read_csv('iris.csv')
+column_names = data.columns
+column_names = set(column_names.drop("Species"))
+class_column_name = "Species"
+class_variable = data["Species"]
+data = data.drop("Species", axis =1)"""
 
 X_train, X_test, y_train, y_test = train_test_split(data, class_variable, test_size = 0.33, stratify = class_variable)
 X_train = pd.DataFrame(X_train)
