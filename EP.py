@@ -202,7 +202,7 @@ def tree_evolution(num_of_iterations, population_size, tournament_size, crossove
         print(tree.calculate_fitness())
         print()"""
         population = newPopulation
-    return (tree, tree.calculate_fitness())
+    return (best_tree, max_fitness)
 
 
 # In[42]:
@@ -361,10 +361,10 @@ def tree_evolution_2(num_of_iterations, population_size, tournament_size, crosso
         avg_dep /= population_size
         avg_width /= population_size
 
-        """print()
+        print()
         best_tree.print_tree()
         print(best_tree.calculate_fitness())
-        print()"""
+        print()
         population = newPopulation
     return (best_tree, max_fitness)
 
